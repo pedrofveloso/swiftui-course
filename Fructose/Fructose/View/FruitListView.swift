@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct FruitListView: View {
+    // MARK: - PROPERTIES
+    private var fruits: [Fruit]
+    
+    init(fruits: [Fruit]) {
+        self.fruits = fruits.shuffled()
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(fruits, id: \.id) { item in
+                FruitRowView(fruit: item)
+                    .padding(.vertical, 4)
+            }
+            .navigationTitle("Fruits")
+        }
+        
     }
 }
 
 struct FruitListView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitListView()
+        FruitListView(fruits: fruitsData)
     }
 }
