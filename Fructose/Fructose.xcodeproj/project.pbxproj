@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF75785525DB037B009F30AF /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75785425DB037B009F30AF /* FruitModel.swift */; };
+		DF75785A25DB044F009F30AF /* FruitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75785925DB044F009F30AF /* FruitsData.swift */; };
 		DFAA8A9925DAD498006BF98A /* FructoseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA8A9825DAD498006BF98A /* FructoseApp.swift */; };
 		DFAA8A9D25DAD49A006BF98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAA8A9C25DAD49A006BF98A /* Assets.xcassets */; };
 		DFAA8AA025DAD49A006BF98A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAA8A9F25DAD49A006BF98A /* Preview Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF75785425DB037B009F30AF /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
+		DF75785925DB044F009F30AF /* FruitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsData.swift; sourceTree = "<group>"; };
 		DFAA8A9525DAD498006BF98A /* Fructose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fructose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAA8A9825DAD498006BF98A /* FructoseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructoseApp.swift; sourceTree = "<group>"; };
 		DFAA8A9C25DAD49A006BF98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF75785325DB0362009F30AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF75785425DB037B009F30AF /* FruitModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF75785825DB042D009F30AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DF75785925DB044F009F30AF /* FruitsData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		DFAA8A8C25DAD498006BF98A = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +76,8 @@
 		DFAA8A9725DAD498006BF98A /* Fructose */ = {
 			isa = PBXGroup;
 			children = (
+				DF75785825DB042D009F30AF /* Data */,
+				DF75785325DB0362009F30AF /* Model */,
 				DFAA8AAC25DAEC65006BF98A /* View */,
 				DFAA8AA925DAEC56006BF98A /* App */,
 				DFAA8A9C25DAD49A006BF98A /* Assets.xcassets */,
@@ -162,6 +184,8 @@
 			files = (
 				DFAA8AB325DAEC82006BF98A /* FruitCardView.swift in Sources */,
 				DFAA8AB625DAF79A006BF98A /* StartButtonView.swift in Sources */,
+				DF75785A25DB044F009F30AF /* FruitsData.swift in Sources */,
+				DF75785525DB037B009F30AF /* FruitModel.swift in Sources */,
 				DFAA8AB925DAFB25006BF98A /* OnboardingView.swift in Sources */,
 				DFAA8A9925DAD498006BF98A /* FructoseApp.swift in Sources */,
 			);
@@ -293,6 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Fructose/Preview Content\"";
+				DEVELOPMENT_TEAM = LMVB5ARR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fructose/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -314,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Fructose/Preview Content\"";
+				DEVELOPMENT_TEAM = LMVB5ARR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fructose/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
