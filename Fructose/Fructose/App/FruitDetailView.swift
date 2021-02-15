@@ -13,36 +13,44 @@ struct FruitDetailView: View {
     
     // MARK: - BODY
     var body: some View {
-        ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 20) {
-                // HEADER
-
-                // TITLE
-                Text(fruit.title)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(fruit.gradientColors[1])
-                
-                // HEADLINE
-                Text(fruit.headline)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                
-                // LEARN ABOUT
-                Text("learn more about \(fruit.title)".uppercased())
-                    .fontWeight(.bold)
-                    .foregroundColor(fruit.gradientColors[1])
-                
-                // DESCRIPTION
-                Text(fruit.description)
-                    .multilineTextAlignment(.leading)
-                
-                // LINK
-                
-            } //: VSTACK
-            .frame(maxWidth: 640) // for ipad purposes
-            .padding(.horizontal, 20)
-        } //: SCROLL
+        NavigationView {
+            ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+                VStack (alignment: .center, spacing: 20) {
+                    // HEADER
+                    FruitHeaderView(fruit: fruit)
+                    
+                    VStack(alignment: .leading, spacing: 20) {
+                        // TITLE
+                        Text(fruit.title)
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .foregroundColor(fruit.gradientColors[1])
+                        
+                        // HEADLINE
+                        Text(fruit.headline)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.leading)
+                        
+                        // LEARN ABOUT
+                        Text("learn more about \(fruit.title)".uppercased())
+                            .fontWeight(.bold)
+                            .foregroundColor(fruit.gradientColors[1])
+                        
+                        // DESCRIPTION
+                        Text(fruit.description)
+                            .multilineTextAlignment(.leading)
+                        
+                        // LINK
+                        
+                    } //: VSTACK
+                    .padding(.horizontal, 20)
+                    .frame(maxWidth: 640, alignment: .center) // for ipad purposes
+                } //: VSTACK
+                .navigationBarTitle(fruit.title, displayMode: .inline)
+                .navigationBarHidden(true)
+            } //: SCROLL
+            .edgesIgnoringSafeArea(.top)
+        } //: NAVIGATION
     }
 }
 
