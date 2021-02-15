@@ -17,7 +17,7 @@ struct FructoseApp: App {
             if isOnboarding {
                 OnboardingView()
             } else {
-                Text("Hello world!")
+                FruitListView()
             }
         }
     }

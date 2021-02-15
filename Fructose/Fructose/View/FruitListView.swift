@@ -9,15 +9,11 @@ import SwiftUI
 
 struct FruitListView: View {
     // MARK: - PROPERTIES
-    private var fruits: [Fruit]
-    
-    init(fruits: [Fruit]) {
-        self.fruits = fruits.shuffled()
-    }
-    
+        
+    // MARK: - BODY
     var body: some View {
         NavigationView {
-            List(fruits, id: \.id) { item in
+            List(fruitsData.shuffled(), id: \.id) { item in
                 FruitRowView(fruit: item)
                     .padding(.vertical, 4)
             }
@@ -29,6 +25,6 @@ struct FruitListView: View {
 
 struct FruitListView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitListView(fruits: fruitsData)
+        FruitListView()
     }
 }
