@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct FructoseApp: App {
+    
+    @AppStorage("isOnboarding") private var isOnboarding: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            if isOnboarding {
+                OnboardingView()
+            } else {
+                Text("Hello world!")
+            }
         }
     }
 }   
