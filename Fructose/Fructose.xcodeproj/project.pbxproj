@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				DFAA8A9825DAD498006BF98A /* FructoseApp.swift */,
+				DF75785D25DB16BF009F30AF /* FruitListView.swift */,
 				DFAA8AB825DAFB25006BF98A /* OnboardingView.swift */,
 			);
 			path = App;
@@ -113,7 +114,6 @@
 			children = (
 				DFAA8AB225DAEC82006BF98A /* FruitCardView.swift */,
 				DFAA8AB525DAF79A006BF98A /* StartButtonView.swift */,
-				DF75785D25DB16BF009F30AF /* FruitListView.swift */,
 				DF75786025DB16CE009F30AF /* FruitRowView.swift */,
 			);
 			path = View;
