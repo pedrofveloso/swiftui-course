@@ -18,9 +18,9 @@ struct FruitNutritionView: View {
             
             DisclosureGroup("Nutritional value per 100g") {
                 
-                ForEach(0..<nutrients.count) { index in
+                ForEach(0..<nutrients.count, id: \.self) { index in
                     
-                    Divider().padding(4)
+                    Divider().padding(.vertical, 2)
                     
                     HStack {
                         Group {

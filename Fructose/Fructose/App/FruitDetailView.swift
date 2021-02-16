@@ -31,6 +31,9 @@ struct FruitDetailView: View {
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
                         
+                        //NUTRITION
+                        FruitNutritionView(fruit: fruit)
+                        
                         // LEARN ABOUT
                         Text("learn more about \(fruit.title)".uppercased())
                             .fontWeight(.bold)
