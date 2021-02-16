@@ -16,7 +16,7 @@ struct SettingsRowView: View {
     // MARK: - BODY
     var body: some View {
         VStack {
-            Divider().padding(.vertical, 2)
+            Divider().padding(.vertical, 4)
             
             HStack {
                 Text(leftLabel)

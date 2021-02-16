@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
+    @AppStorage("isOnboarding") private var isOnboarding: Bool = false
     
     // MARK: - BODY
     var body: some View {
@@ -36,6 +37,37 @@ struct SettingsView: View {
                     
                     // MARK: - SECTION 2
                     GroupBox(
+                        label: SettingsLabelView(info: (title: "customization", imageName: "paintbrush"))
+                    ) {
+                        Divider().padding(.vertical, 4)
+                        
+                        Text("If you wish, you can restart the application by toggle the switch in this box. That way it restarts the onboarding process and you will see the welcome screen again.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        
+                        Toggle(isOn: $isOnboarding, label: {
+                            if isOnboarding {
+                                Text("Restarted".uppercased())
+                                    .foregroundColor(.green)
+                                    .fontWeight(.bold)
+                            } else {
+                                Text("Restart".uppercased())
+                                    .foregroundColor(.secondary)
+                                    .fontWeight(.bold)
+                            }
+                        })
+                        .padding()
+                        .background(
+                            Color(UIColor.tertiarySystemBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                        )
+                    } //: GROUPBOX
+                    
+                    // MARK: - SECTION 3
+                    GroupBox(
                         label: SettingsLabelView(info: (title: "application", imageName: "iphone.homebutton"))) {
                         SettingsRowView(leftLabel: "Developer", rightLabel: "Pedro Veloso")
                         SettingsRowView(leftLabel: "Github", rightLabel: "@pedrofveloso", url: "https://github.com/pedrofveloso")
@@ -52,10 +84,11 @@ struct SettingsView: View {
             .navigationBarTitle("Settings", displayMode: .large)
             .navigationBarItems(
                 trailing:
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "xmark")
+                    HStack(spacing: 0) {
+                        Image(systemName: "arrow.down")
+                            .foregroundColor(Color.secondary.opacity(0.3))
+                        Image(systemName: "hand.point.up.left.fill")
+                            .foregroundColor(Color.secondary.opacity(0.3))
                     }
             )
         } //: NAVIGATION
