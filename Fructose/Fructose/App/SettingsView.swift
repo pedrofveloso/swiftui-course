@@ -16,6 +16,8 @@ struct SettingsView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
+                    
+                    // MARK: - SECTION 1
                     GroupBox(
                         label:
                             SettingsLabelView(info: (title: "fructose app", imageName: "info.circle"))
@@ -31,6 +33,19 @@ struct SettingsView: View {
                                 .font(.footnote)
                         }
                     } //: GROUPBOX
+                    
+                    // MARK: - SECTION 2
+                    GroupBox(
+                        label: SettingsLabelView(info: (title: "application", imageName: "iphone.homebutton"))) {
+                        SettingsRowView(leftLabel: "Developer", rightLabel: "Pedro Veloso")
+                        SettingsRowView(leftLabel: "Github", rightLabel: "@pedrofveloso", url: "https://github.com/pedrofveloso")
+                        SettingsRowView(leftLabel: "Compatibility", rightLabel: "iOS 14+")
+                        SettingsRowView(leftLabel: "SwiftUI", rightLabel: "2.0")
+                        SettingsRowView(leftLabel: "Udemy Course", rightLabel: "SwiftUI masterclass", url: "https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/")
+                        SettingsRowView(leftLabel: "Instructor", rightLabel: "Robert Petras", url: "https://twitter.com/robertpetras")
+                        SettingsRowView(leftLabel: "App Version", rightLabel: "1.1.0")
+                    } //: GROUPBOX
+                    
                 } //: VSTACK
             } //: SCROLL
             .padding()
