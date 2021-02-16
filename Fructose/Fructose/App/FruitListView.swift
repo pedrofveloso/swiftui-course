@@ -14,12 +14,14 @@ struct FruitListView: View {
     // MARK: - BODY
     var body: some View {
         NavigationView {
-            List(fruitsData.shuffled(), id: \.id) { item in
-                NavigationLink(destination: FruitDetailView(fruit: item)) {
-                    FruitRowView(fruit: item)
-                        .padding(.vertical, 4)
-                }
-            }
+            List {
+                ForEach(fruitsData.shuffled()) { item in
+                    NavigationLink(destination: FruitDetailView(fruit: item)) {
+                        FruitRowView(fruit: item)
+                            .padding(.vertical, 4)
+                    }
+                } //: LOOP
+            } //: LIST
             .navigationTitle("Fruits")
             .navigationBarItems(
                 trailing:
@@ -32,8 +34,8 @@ struct FruitListView: View {
                         SettingsView()
                     }
             )
-        }
-        
+        } //: NAVIGATION
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

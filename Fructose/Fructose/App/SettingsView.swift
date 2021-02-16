@@ -15,7 +15,23 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                Text("Hello, World!")
+                VStack(spacing: 20) {
+                    GroupBox(
+                        label:
+                            SettingsLabelView(info: (title: "fructose app", imageName: "info.circle"))
+                    ) {
+                        Divider().padding(.vertical, 4)
+                        HStack(alignment: .center, spacing: 10) {
+                            Image("logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(9)
+                            Text("Most fruits are naturally low in fat, sodium and calories. None have cholesterol. Fruits are source of many essential nutrients, including potassium, dietary fiber, vitamins and much more.")
+                                .font(.footnote)
+                        }
+                    }
+                }
             } //: SCROLL
             .padding()
             .navigationBarTitle("Settings", displayMode: .large)
