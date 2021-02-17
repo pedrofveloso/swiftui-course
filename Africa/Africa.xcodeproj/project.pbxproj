@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2AFDFE25DDB91E007527B4 /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AFDFD25DDB91E007527B4 /* AnimalsListView.swift */; };
+		DF2AFE0225DDBBFD007527B4 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AFE0125DDBBFD007527B4 /* AnimalModel.swift */; };
 		DF78E47625DD672D00EFFB1C /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E47525DD672D00EFFB1C /* AfricaApp.swift */; };
 		DF78E47A25DD672F00EFFB1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF78E47925DD672F00EFFB1C /* Assets.xcassets */; };
 		DF78E47D25DD672F00EFFB1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF78E47C25DD672F00EFFB1C /* Preview Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF2AFDFD25DDB91E007527B4 /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
+		DF2AFE0125DDBBFD007527B4 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		DF78E47225DD672D00EFFB1C /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF78E47525DD672D00EFFB1C /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		DF78E47925DD672F00EFFB1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 				DF78E4C525DD8D0E00EFFB1C /* CoverImageModel.swift */,
 			);
 			path = CoverImage;
+			sourceTree = "<group>";
+		};
+		DF2AFDFC25DDB8ED007527B4 /* AnimalsListView */ = {
+			isa = PBXGroup;
+			children = (
+				DF2AFDFD25DDB91E007527B4 /* AnimalsListView.swift */,
+				DF2AFE0125DDBBFD007527B4 /* AnimalModel.swift */,
+			);
+			path = AnimalsListView;
 			sourceTree = "<group>";
 		};
 		DF78E46925DD672D00EFFB1C = {
@@ -191,6 +204,7 @@
 		DF78E4C425DD8CFA00EFFB1C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DF2AFDFC25DDB8ED007527B4 /* AnimalsListView */,
 				DF2AFDFA25DD90EB007527B4 /* CoverImage */,
 			);
 			path = Components;
@@ -281,8 +295,10 @@
 			files = (
 				DF78E4BA25DD85C400EFFB1C /* CollectionView.swift in Sources */,
 				DF78E4B125DD855900EFFB1C /* VideoView.swift in Sources */,
+				DF2AFDFE25DDB91E007527B4 /* AnimalsListView.swift in Sources */,
 				DF78E47625DD672D00EFFB1C /* AfricaApp.swift in Sources */,
 				DF78E4C625DD8D0E00EFFB1C /* CoverImageModel.swift in Sources */,
+				DF2AFE0225DDBBFD007527B4 /* AnimalModel.swift in Sources */,
 				DF78E4CB25DD8F2A00EFFB1C /* CoverImageView.swift in Sources */,
 				DF78E4BF25DD8CBD00EFFB1C /* Bundle+Extension.swift in Sources */,
 				DF78E4B725DD857800EFFB1C /* MapView.swift in Sources */,

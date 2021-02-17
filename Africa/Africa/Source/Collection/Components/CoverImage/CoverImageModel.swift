@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoverImageModel: Codable, Identifiable {
+struct CoverImage: Codable, Identifiable {
     let id: Int
     let name: String
 }

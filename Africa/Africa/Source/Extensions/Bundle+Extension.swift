@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-    func decode(_ file: String) -> [CoverImageModel] {
+    func decode<T: Codable>(_ file: String) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.") // for test purposes only. Do not use fatal error on production apps;
         }
@@ -19,8 +19,8 @@ extension Bundle {
         
         let decoder = JSONDecoder()
         
-        guard let loadedObject = try? decoder.decode([CoverImageModel].self, from: data) else {
-            fatalError("Failed to decode \(file) from bundle.")
+        guard let loadedObject = try? decoder.decode(T.self, from: data) else {
+            fatalError("Failed to decode \(file) from bundle.") // for test purposes only. Do not use fatal error on production apps;
         }
         
         return loadedObject
