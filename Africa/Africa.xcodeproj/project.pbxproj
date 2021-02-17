@@ -34,6 +34,9 @@
 		DF78E4BF25DD8CBD00EFFB1C /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4BE25DD8CBD00EFFB1C /* Bundle+Extension.swift */; };
 		DF78E4C625DD8D0E00EFFB1C /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4C525DD8D0E00EFFB1C /* CoverImageModel.swift */; };
 		DF78E4CB25DD8F2A00EFFB1C /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4CA25DD8F2A00EFFB1C /* CoverImageView.swift */; };
+		DFC48F7F25DDC590009A30ED /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48F7E25DDC590009A30ED /* AnimalDetailView.swift */; };
+		DFC48F8425DDCA13009A30ED /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48F8325DDCA13009A30ED /* HeadingView.swift */; };
+		DFF9953225DDCBF600DC02B2 /* InsetGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9953125DDCBF600DC02B2 /* InsetGalleryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		DF78E4BE25DD8CBD00EFFB1C /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		DF78E4C525DD8D0E00EFFB1C /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
 		DF78E4CA25DD8F2A00EFFB1C /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
+		DFC48F7E25DDC590009A30ED /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
+		DFC48F8325DDCA13009A30ED /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
+		DFF9953125DDCBF600DC02B2 /* InsetGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGalleryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +185,7 @@
 				DF78E4B625DD857800EFFB1C /* MapView.swift */,
 				DF78E4B025DD855900EFFB1C /* VideoView.swift */,
 				DF78E4C325DD8CE800EFFB1C /* Collection */,
+				DFC48F8225DDC9F3009A30ED /* Components */,
 				DF78E4BD25DD8CA200EFFB1C /* Extensions */,
 			);
 			path = Source;
@@ -196,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				DF78E4B925DD85C400EFFB1C /* CollectionView.swift */,
+				DFC48F7E25DDC590009A30ED /* AnimalDetailView.swift */,
 				DF78E4C425DD8CFA00EFFB1C /* Components */,
 			);
 			path = Collection;
@@ -206,6 +214,15 @@
 			children = (
 				DF2AFDFC25DDB8ED007527B4 /* AnimalsListView */,
 				DF2AFDFA25DD90EB007527B4 /* CoverImage */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DFC48F8225DDC9F3009A30ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DFC48F8325DDCA13009A30ED /* HeadingView.swift */,
+				DFF9953125DDCBF600DC02B2 /* InsetGalleryView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,12 +315,15 @@
 				DF2AFDFE25DDB91E007527B4 /* AnimalsListView.swift in Sources */,
 				DF78E47625DD672D00EFFB1C /* AfricaApp.swift in Sources */,
 				DF78E4C625DD8D0E00EFFB1C /* CoverImageModel.swift in Sources */,
+				DFC48F7F25DDC590009A30ED /* AnimalDetailView.swift in Sources */,
 				DF2AFE0225DDBBFD007527B4 /* AnimalModel.swift in Sources */,
 				DF78E4CB25DD8F2A00EFFB1C /* CoverImageView.swift in Sources */,
 				DF78E4BF25DD8CBD00EFFB1C /* Bundle+Extension.swift in Sources */,
 				DF78E4B725DD857800EFFB1C /* MapView.swift in Sources */,
 				DF78E4AD25DD853400EFFB1C /* MainView.swift in Sources */,
+				DFF9953225DDCBF600DC02B2 /* InsetGalleryView.swift in Sources */,
 				DF78E4B425DD856300EFFB1C /* GalleryView.swift in Sources */,
+				DFC48F8425DDCA13009A30ED /* HeadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
+				DEVELOPMENT_TEAM = LMVB5ARR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -454,6 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
+				DEVELOPMENT_TEAM = LMVB5ARR8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

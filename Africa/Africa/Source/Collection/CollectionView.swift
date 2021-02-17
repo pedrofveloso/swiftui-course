@@ -20,8 +20,10 @@ struct CollectionView: View {
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 
                 ForEach(animals) { animal in
-                    AnimalsListView(animal: animal)
-                }
+                    NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                        AnimalsListView(animal: animal)
+                    } //: LINK
+                } //: LOOP
                 
             } //: LIST
             .navigationBarTitle("Africa", displayMode: .large)
