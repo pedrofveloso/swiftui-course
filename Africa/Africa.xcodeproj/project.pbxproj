@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DF78E47625DD672D00EFFB1C /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E47525DD672D00EFFB1C /* AfricaApp.swift */; };
-		DF78E47825DD672D00EFFB1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E47725DD672D00EFFB1C /* ContentView.swift */; };
 		DF78E47A25DD672F00EFFB1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF78E47925DD672F00EFFB1C /* Assets.xcassets */; };
 		DF78E47D25DD672F00EFFB1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF78E47C25DD672F00EFFB1C /* Preview Assets.xcassets */; };
 		DF78E49125DD714400EFFB1C /* rhino.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF78E48725DD714200EFFB1C /* rhino.mp4 */; };
@@ -25,12 +24,16 @@
 		DF78E4A225DD73ED00EFFB1C /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = DF78E49E25DD73ED00EFFB1C /* videos.json */; };
 		DF78E4A325DD73ED00EFFB1C /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = DF78E49F25DD73ED00EFFB1C /* locations.json */; };
 		DF78E4A425DD73ED00EFFB1C /* covers.json in Resources */ = {isa = PBXBuildFile; fileRef = DF78E4A025DD73ED00EFFB1C /* covers.json */; };
+		DF78E4AD25DD853400EFFB1C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4AC25DD853400EFFB1C /* MainView.swift */; };
+		DF78E4B125DD855900EFFB1C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4B025DD855900EFFB1C /* VideoView.swift */; };
+		DF78E4B425DD856300EFFB1C /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4B325DD856300EFFB1C /* GalleryView.swift */; };
+		DF78E4B725DD857800EFFB1C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4B625DD857800EFFB1C /* MapView.swift */; };
+		DF78E4BA25DD85C400EFFB1C /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E4B925DD85C400EFFB1C /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF78E47225DD672D00EFFB1C /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF78E47525DD672D00EFFB1C /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
-		DF78E47725DD672D00EFFB1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF78E47925DD672F00EFFB1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF78E47C25DD672F00EFFB1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF78E47E25DD672F00EFFB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +51,11 @@
 		DF78E49E25DD73ED00EFFB1C /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
 		DF78E49F25DD73ED00EFFB1C /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		DF78E4A025DD73ED00EFFB1C /* covers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = covers.json; sourceTree = "<group>"; };
+		DF78E4AC25DD853400EFFB1C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DF78E4B025DD855900EFFB1C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		DF78E4B325DD856300EFFB1C /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		DF78E4B625DD857800EFFB1C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DF78E4B925DD85C400EFFB1C /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +88,11 @@
 		DF78E47425DD672D00EFFB1C /* Africa */ = {
 			isa = PBXGroup;
 			children = (
-				DF78E48525DD711A00EFFB1C /* Resources */,
-				DF78E47525DD672D00EFFB1C /* AfricaApp.swift */,
-				DF78E47725DD672D00EFFB1C /* ContentView.swift */,
 				DF78E47925DD672F00EFFB1C /* Assets.xcassets */,
 				DF78E47E25DD672F00EFFB1C /* Info.plist */,
 				DF78E47B25DD672F00EFFB1C /* Preview Content */,
+				DF78E48525DD711A00EFFB1C /* Resources */,
+				DF78E4A925DD851400EFFB1C /* Source */,
 			);
 			path = Africa;
 			sourceTree = "<group>";
@@ -133,6 +140,19 @@
 				DF78E49E25DD73ED00EFFB1C /* videos.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		DF78E4A925DD851400EFFB1C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF78E47525DD672D00EFFB1C /* AfricaApp.swift */,
+				DF78E4B925DD85C400EFFB1C /* CollectionView.swift */,
+				DF78E4B325DD856300EFFB1C /* GalleryView.swift */,
+				DF78E4AC25DD853400EFFB1C /* MainView.swift */,
+				DF78E4B625DD857800EFFB1C /* MapView.swift */,
+				DF78E4B025DD855900EFFB1C /* VideoView.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF78E47825DD672D00EFFB1C /* ContentView.swift in Sources */,
+				DF78E4BA25DD85C400EFFB1C /* CollectionView.swift in Sources */,
+				DF78E4B125DD855900EFFB1C /* VideoView.swift in Sources */,
 				DF78E47625DD672D00EFFB1C /* AfricaApp.swift in Sources */,
+				DF78E4B725DD857800EFFB1C /* MapView.swift in Sources */,
+				DF78E4AD25DD853400EFFB1C /* MainView.swift in Sources */,
+				DF78E4B425DD856300EFFB1C /* GalleryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
