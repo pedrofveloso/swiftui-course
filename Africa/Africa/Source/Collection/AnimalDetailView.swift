@@ -15,10 +15,13 @@ struct AnimalDetailView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
+                
+                // HERO IMAGE
                 Image(animal.image)
                     .resizable()
                     .scaledToFit()
                 
+                // TITLE
                 Text(animal.name.uppercased())
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -31,12 +34,14 @@ struct AnimalDetailView: View {
                             .offset(y: 24)
                     )
                 
+                // HEADLINE
                 Text(animal.headline)
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.accentColor)
                     .padding(.horizontal)
                 
+                // GALLERY
                 Group {
                     HeadingView(content: (image: "photo.on.rectangle.angled",
                                           title: "Wilderness in Pictures"))
@@ -45,6 +50,42 @@ struct AnimalDetailView: View {
                 }
                 .padding(.horizontal)
                 
+                // FACTS
+                Group {
+                    HeadingView(content: (image: "questionmark.circle",
+                                          title: "Did you know?"))
+                    InsetFactView(animal: animal)
+                }
+                .padding(.horizontal)
+                
+                // DESCRIPTION
+                Group {
+                    HeadingView(content: (image: "doc.plaintext",
+                                          title: "All about \(animal.name)"))
+                    
+                    Text(animal.description)
+                        .multilineTextAlignment(.leading)
+                        .layoutPriority(1)
+                }
+                .padding(.horizontal)
+                
+                // MAP
+                Group {
+                    HeadingView(content: (image: "map",
+                                          title: "National Parks"))
+                    
+                    InsetMapView()
+                }
+                .padding(.horizontal)
+                
+                // LINK
+                Group {
+                    HeadingView(content: (image: "books.vertical",
+                                          title: "Learn More"))
+                    
+                    ExternalWeblinkView(animal: animal)
+                }
+                .padding(.horizontal)
 
             } //: VSTACK
             .navigationBarTitle("Learn about \(animal.name)", displayMode: .inline)
