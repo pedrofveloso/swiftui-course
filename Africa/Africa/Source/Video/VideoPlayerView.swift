@@ -19,6 +19,7 @@ struct VideoPlayerView: View {
                 .overlay(
                     Image("logo")
                         .resizable()
+                        .scaledToFit()
                         .frame(width: 32, height: 32)
                         .padding(.vertical, 6)
                         .padding(.horizontal, 8)
