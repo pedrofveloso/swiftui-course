@@ -30,7 +30,6 @@ struct GalleryView: View {
                 .overlay(Circle().stroke(Color.white, lineWidth: 6))
             
             Slider(value: $gridNumberOfColumns, in: 2...4, step: 1)
-                .padding(.horizontal, 24)
                 .onChange(of: gridNumberOfColumns, perform: { value in
                     updateGridLayout()
                 })
@@ -52,10 +51,10 @@ struct GalleryView: View {
                 .animation(.easeIn)
             } //: SCROLL
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
         } //: VSTACK
-        .clipped()
         .padding(.top, 24)
+        .padding(.horizontal, 24)
+        .clipped()
         .background(
             MotionAnimationView()
         )
