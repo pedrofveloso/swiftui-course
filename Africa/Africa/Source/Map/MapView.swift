@@ -31,14 +31,63 @@ struct MapView: View {
 //            MapMarker(coordinate: location.coordinate, tint: .accentColor)
             
             // display a custom pin
+//            MapAnnotation(coordinate: location.coordinate) {
+//                Image("logo")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 32, height: 32, alignment: .center)
+//            }
+            
             MapAnnotation(coordinate: location.coordinate) {
-                Image("logo")
+                MapLocationView(location: location)
+            } //: ANNOTATION
+        } //: MAP
+        .overlay(
+            HStack(alignment: .center, spacing: 10) {
+                Image("compass")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 32, height: 32, alignment: .center)
-            }
-            
-        }
+                    .frame(width: 48, height: 48, alignment: .center)
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        Text("Latitude:")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.latitude)")
+                            .font(.footnote)
+                    } //: HSTACK
+                    
+                    Divider()
+                    
+                    HStack {
+                        Text("Longitude:")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.longitude)")
+                            .font(.footnote)
+                    } //: HSTACK
+                } //: VSTACK
+                
+            } //: HSTACK
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .background(
+                Color.black
+                    .cornerRadius(8)
+                    .opacity(0.6)
+            )
+            .padding()
+            , alignment: .top
+        )
+        .overlay(
+            Image(systemName: "plus")
+                .opacity(0.3)
+        )
     }
 }
 
