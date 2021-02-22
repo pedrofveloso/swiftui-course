@@ -12,8 +12,21 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        FooterView()
-            .padding(.horizontal)
+        ZStack {
+            VStack {
+                NavigationBarView()
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                    .padding(.top, appNotchTopSize)
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
+                Spacer()
+                FooterView()
+                    .padding(.horizontal)
+            } //: VSTACK
+            .background(colorBackground.ignoresSafeArea(.all, edges: .all))
+        } //: ZSTACK
+        .ignoresSafeArea(.all, edges: .top)
     }
 }
 
