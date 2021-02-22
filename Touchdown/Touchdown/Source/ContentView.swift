@@ -10,14 +10,18 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTY
     
+    private var topPadding: CGFloat {
+        (appNotchTopSize ?? 0.0) + 16
+    }
+    
     // MARK: - BODY
     var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: 0) {
                 NavigationBarView()
                     .padding(.horizontal)
                     .padding(.bottom)
-                    .padding(.top, appNotchTopSize)
+                    .padding(.top, topPadding)
                     .background(Color.white)
                     .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
                 Spacer()
