@@ -33,6 +33,7 @@ struct NavigationBarView: View {
             }
             
         } //: HSTACK
+        .padding(.top, 16)
         .onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimated = true
