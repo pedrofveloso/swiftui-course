@@ -15,7 +15,7 @@ struct ContentView: View {
         ZStack {
             VStack(spacing: 0) {
                 NavigationBarView()
-                    .padding(.horizontal)
+                    .padding(.horizontal, 15)
                     .padding(.bottom)
                     .padding(.top, appNotchTopSize)
                     .background(Color.white)
@@ -25,6 +25,8 @@ struct ContentView: View {
                     VStack(spacing: 0) {
                         FeaturedTabView()
                             .padding(.vertical, 20)
+                        
+                        CategoryGridView()
                         
                         FooterView()
                             .padding(.horizontal)
