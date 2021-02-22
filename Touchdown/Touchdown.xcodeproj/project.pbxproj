@@ -11,6 +11,10 @@
 		DF9F42AB25E3FBD1009326AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F42AA25E3FBD1009326AC /* ContentView.swift */; };
 		DF9F42AD25E3FBD2009326AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42AC25E3FBD2009326AC /* Assets.xcassets */; };
 		DF9F42B025E3FBD2009326AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42AF25E3FBD2009326AC /* Preview Assets.xcassets */; };
+		DF9F42BC25E3FD03009326AC /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42B825E3FD02009326AC /* product.json */; };
+		DF9F42BD25E3FD03009326AC /* brand.json in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42B925E3FD02009326AC /* brand.json */; };
+		DF9F42BE25E3FD03009326AC /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42BA25E3FD03009326AC /* category.json */; };
+		DF9F42BF25E3FD03009326AC /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = DF9F42BB25E3FD03009326AC /* player.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		DF9F42AC25E3FBD2009326AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF9F42AF25E3FBD2009326AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF9F42B125E3FBD2009326AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF9F42B825E3FD02009326AC /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
+		DF9F42B925E3FD02009326AC /* brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand.json; sourceTree = "<group>"; };
+		DF9F42BA25E3FD03009326AC /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		DF9F42BB25E3FD03009326AC /* player.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = player.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,8 @@
 		DF9F42A725E3FBD1009326AC /* Touchdown */ = {
 			isa = PBXGroup;
 			children = (
-				DF9F42A825E3FBD1009326AC /* TouchdownApp.swift */,
-				DF9F42AA25E3FBD1009326AC /* ContentView.swift */,
-				DF9F42AC25E3FBD2009326AC /* Assets.xcassets */,
+				DF9F42C225E3FD31009326AC /* Resources */,
+				DF9F42C325E3FD55009326AC /* Source */,
 				DF9F42B125E3FBD2009326AC /* Info.plist */,
 				DF9F42AE25E3FBD2009326AC /* Preview Content */,
 			);
@@ -67,6 +74,35 @@
 				DF9F42AF25E3FBD2009326AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF9F42C125E3FD23009326AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F42B925E3FD02009326AC /* brand.json */,
+				DF9F42BA25E3FD03009326AC /* category.json */,
+				DF9F42BB25E3FD03009326AC /* player.json */,
+				DF9F42B825E3FD02009326AC /* product.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DF9F42C225E3FD31009326AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F42C125E3FD23009326AC /* Data */,
+				DF9F42AC25E3FBD2009326AC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF9F42C325E3FD55009326AC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F42A825E3FBD1009326AC /* TouchdownApp.swift */,
+				DF9F42AA25E3FBD1009326AC /* ContentView.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +162,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9F42BF25E3FD03009326AC /* player.json in Resources */,
 				DF9F42B025E3FBD2009326AC /* Preview Assets.xcassets in Resources */,
+				DF9F42BD25E3FD03009326AC /* brand.json in Resources */,
+				DF9F42BE25E3FD03009326AC /* category.json in Resources */,
 				DF9F42AD25E3FBD2009326AC /* Assets.xcassets in Resources */,
+				DF9F42BC25E3FD03009326AC /* product.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
