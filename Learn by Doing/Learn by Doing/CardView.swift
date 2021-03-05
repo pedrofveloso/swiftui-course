@@ -11,10 +11,14 @@ struct CardView: View {
     // MARK: - PROPERTIES
     var card: Card
     
+    @State private var fadeIn = false
+    @State private var titleAndButtonAnimation = false
+    
     // MARK: - BODY
     var body: some View {
         ZStack {
             Image(card.imageName)
+                .opacity(fadeIn ? 1.0 : 0.0)
             
             VStack {
                 Text(card.title)
@@ -27,7 +31,8 @@ struct CardView: View {
                     .foregroundColor(.white)
                     .italic()
             } //: VSTACK
-            .offset(y: -220)
+            .offset(y: titleAndButtonAnimation ? -220 : -300)
+            .opacity(titleAndButtonAnimation ? 1.0 : 0.0)
             
             Button(action: {
                 playSound("sound-chime", type: "mp3")
@@ -47,7 +52,8 @@ struct CardView: View {
                 .clipShape(Capsule())
                 .shadow(color: Color("ColorShadow"), radius: 6, x: 0, y: 3)
             } //: BUTTON
-            .offset(y: 210)
+            .offset(y: titleAndButtonAnimation ? 210 : 300)
+            .opacity(titleAndButtonAnimation ? 1.0 : 0.0)
             
         } //: ZSTACK
         .frame(width: 335, height: 545)
@@ -58,6 +64,14 @@ struct CardView: View {
         )
         .cornerRadius(16)
         .shadow(radius: 8)
+        .onAppear {
+            withAnimation(.linear(duration: 1.2)) {
+                fadeIn.toggle()
+            }
+            withAnimation(.linear(duration: 0.6)) {
+                titleAndButtonAnimation.toggle()
+            }
+        }
     }
 }
 
