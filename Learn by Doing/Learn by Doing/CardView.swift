@@ -29,7 +29,9 @@ struct CardView: View {
             } //: VSTACK
             .offset(y: -220)
             
-            Button(action: { print("button hitted") }) {
+            Button(action: {
+                playSound("sound-chime", type: "mp3")
+            }) {
                 HStack {
                     Text(card.callToAction.uppercased())
                         .fontWeight(.heavy)
