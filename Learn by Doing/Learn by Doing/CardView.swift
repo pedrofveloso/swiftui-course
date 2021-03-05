@@ -14,6 +14,8 @@ struct CardView: View {
     @State private var fadeIn = false
     @State private var titleAndButtonAnimation = false
     
+    private let haptics = UIImpactFeedbackGenerator(style: .medium)
+    
     // MARK: - BODY
     var body: some View {
         ZStack {
@@ -36,6 +38,7 @@ struct CardView: View {
             
             Button(action: {
                 playSound("sound-chime", type: "mp3")
+                haptics.impactOccurred()
             }) {
                 HStack {
                     Text(card.callToAction.uppercased())
