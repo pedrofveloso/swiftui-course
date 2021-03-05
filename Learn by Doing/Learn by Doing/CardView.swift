@@ -13,6 +13,7 @@ struct CardView: View {
     
     @State private var fadeIn = false
     @State private var titleAndButtonAnimation = false
+    @State private var shouldShowAlert = false
     
     private let haptics = UIImpactFeedbackGenerator(style: .medium)
     
@@ -38,6 +39,7 @@ struct CardView: View {
             
             Button(action: {
                 playSound("sound-chime", type: "mp3")
+                shouldShowAlert.toggle()
                 haptics.impactOccurred()
             }) {
                 HStack {
@@ -74,6 +76,13 @@ struct CardView: View {
             withAnimation(.linear(duration: 0.6)) {
                 titleAndButtonAnimation.toggle()
             }
+        }
+        .alert(isPresented: $shouldShowAlert) {
+            Alert(
+                title: Text(card.title),
+                message: Text(card.message),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
 }
