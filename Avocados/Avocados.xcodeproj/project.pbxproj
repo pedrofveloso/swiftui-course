@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DF0995F325F43444001D6A11 /* AvocadosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0995F225F43444001D6A11 /* AvocadosApp.swift */; };
-		DF0995F525F43444001D6A11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0995F425F43444001D6A11 /* ContentView.swift */; };
+		DF0995F525F43444001D6A11 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0995F425F43444001D6A11 /* AppView.swift */; };
 		DF0995F725F43447001D6A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0995F625F43447001D6A11 /* Assets.xcassets */; };
 		DF0995FA25F43447001D6A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0995F925F43447001D6A11 /* Preview Assets.xcassets */; };
+		DFE2F92325F4400D001C1B2A /* AvocadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2F92225F4400D001C1B2A /* AvocadosView.swift */; };
+		DFE2F92625F44021001C1B2A /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2F92525F44021001C1B2A /* RecipesView.swift */; };
+		DFE2F92925F44063001C1B2A /* RipeningStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2F92825F44063001C1B2A /* RipeningStageView.swift */; };
+		DFE2F92E25F44089001C1B2A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2F92D25F44089001C1B2A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF0995EF25F43444001D6A11 /* Avocados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0995F225F43444001D6A11 /* AvocadosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosApp.swift; sourceTree = "<group>"; };
-		DF0995F425F43444001D6A11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF0995F425F43444001D6A11 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		DF0995F625F43447001D6A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF0995F925F43447001D6A11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF0995FB25F43447001D6A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE2F92225F4400D001C1B2A /* AvocadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosView.swift; sourceTree = "<group>"; };
+		DFE2F92525F44021001C1B2A /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		DFE2F92825F44063001C1B2A /* RipeningStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStageView.swift; sourceTree = "<group>"; };
+		DFE2F92D25F44089001C1B2A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,10 @@
 		DF0995F125F43444001D6A11 /* Avocados */ = {
 			isa = PBXGroup;
 			children = (
-				DF0995F225F43444001D6A11 /* AvocadosApp.swift */,
-				DF0995F425F43444001D6A11 /* ContentView.swift */,
-				DF0995F625F43447001D6A11 /* Assets.xcassets */,
 				DF0995FB25F43447001D6A11 /* Info.plist */,
 				DF0995F825F43447001D6A11 /* Preview Content */,
+				DFE2F91C25F43EEA001C1B2A /* Resource */,
+				DFE2F91A25F43ED2001C1B2A /* Source */,
 			);
 			path = Avocados;
 			sourceTree = "<group>";
@@ -67,6 +74,59 @@
 				DF0995F925F43447001D6A11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFE2F91A25F43ED2001C1B2A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF0995F225F43444001D6A11 /* AvocadosApp.swift */,
+				DF0995F425F43444001D6A11 /* AppView.swift */,
+				DFE2F91D25F43F05001C1B2A /* Avocados */,
+				DFE2F91E25F43F34001C1B2A /* Recipes */,
+				DFE2F91F25F43F4D001C1B2A /* RipeningStage */,
+				DFE2F92025F43F55001C1B2A /* Settings */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DFE2F91C25F43EEA001C1B2A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DF0995F625F43447001D6A11 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DFE2F91D25F43F05001C1B2A /* Avocados */ = {
+			isa = PBXGroup;
+			children = (
+				DFE2F92225F4400D001C1B2A /* AvocadosView.swift */,
+			);
+			path = Avocados;
+			sourceTree = "<group>";
+		};
+		DFE2F91E25F43F34001C1B2A /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				DFE2F92525F44021001C1B2A /* RecipesView.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		DFE2F91F25F43F4D001C1B2A /* RipeningStage */ = {
+			isa = PBXGroup;
+			children = (
+				DFE2F92825F44063001C1B2A /* RipeningStageView.swift */,
+			);
+			path = RipeningStage;
+			sourceTree = "<group>";
+		};
+		DFE2F92025F43F55001C1B2A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DFE2F92D25F44089001C1B2A /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0995F525F43444001D6A11 /* ContentView.swift in Sources */,
+				DF0995F525F43444001D6A11 /* AppView.swift in Sources */,
 				DF0995F325F43444001D6A11 /* AvocadosApp.swift in Sources */,
+				DFE2F92625F44021001C1B2A /* RecipesView.swift in Sources */,
+				DFE2F92E25F44089001C1B2A /* SettingsView.swift in Sources */,
+				DFE2F92325F4400D001C1B2A /* AvocadosView.swift in Sources */,
+				DFE2F92925F44063001C1B2A /* RipeningStageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
