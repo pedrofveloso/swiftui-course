@@ -34,8 +34,7 @@ struct AppView: View {
                     Image("tabicon-settings")
                     Text("Settings")
                 }
-        }
-        .edgesIgnoringSafeArea(.top)
+        } //: TAB)
         .accentColor(Color.primary)
     }
 }
